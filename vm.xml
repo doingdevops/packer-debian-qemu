@@ -1,0 +1,19 @@
+<domain type='qemu'>
+  <name>debian</name>
+  <uuid>c7a5fdbd-cdaf-9455-926a-d65c16db1809</uuid>
+  <memory>2048000</memory>
+  <vcpu>2</vcpu>
+  <os>
+    <type arch='i686' machine='pc-i440fx-6.2'>hvm</type>
+    <boot dev='hd'/>
+  </os>
+  <devices>
+    <emulator>/opt/homebrew/bin/qemu-system-x86_64</emulator>
+    <disk type='file' device='disk'>
+      <driver name="qemu" type="qcow2"/>
+      <source file='/Users/nic/code/github.com/jumppad-labs/qemu_test/output_debian/debian'/>
+      <target dev='hda'/>
+    </disk>
+    <graphics type='vnc' port='-1'/>
+  </devices>
+</domain>
